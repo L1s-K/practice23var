@@ -33,6 +33,7 @@
             labelRangCount = new Label();
             buttonGenerateMatrix = new Button();
             buttonCalculateAVG = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridViewMatrix).BeginInit();
             SuspendLayout();
             // 
@@ -60,11 +61,11 @@
             // labelRangCount
             // 
             labelRangCount.AutoSize = true;
-            labelRangCount.Location = new Point(31, 20);
+            labelRangCount.Location = new Point(16, 20);
             labelRangCount.Name = "labelRangCount";
-            labelRangCount.Size = new Size(134, 15);
+            labelRangCount.Size = new Size(149, 15);
             labelRangCount.TabIndex = 2;
-            labelRangCount.Text = "Введите ранг матрицы:";
+            labelRangCount.Text = "Введите размер матрицы:";
             // 
             // buttonGenerateMatrix
             // 
@@ -86,18 +87,29 @@
             buttonCalculateAVG.UseVisualStyleBackColor = true;
             buttonCalculateAVG.Click += buttonCalculateAVG_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(538, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(239, 45);
+            label1.TabIndex = 5;
+            label1.Text = "Поиск среднего арифметического \r\nдля каждой строки случайной матрицы в \r\nDataGridView.";
+            label1.Click += label1_Click;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(buttonCalculateAVG);
             Controls.Add(buttonGenerateMatrix);
             Controls.Add(labelRangCount);
             Controls.Add(textBoxRang);
             Controls.Add(dataGridViewMatrix);
             Name = "Main";
-            Text = "Среднее арифметическое";
+            Text = "Среднее арифметическое строк матрицы";
             ((System.ComponentModel.ISupportInitialize)dataGridViewMatrix).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -110,5 +122,6 @@
         private Label labelRangCount;
         private Button buttonGenerateMatrix;
         private Button buttonCalculateAVG;
+        private Label label1;
     }
 }

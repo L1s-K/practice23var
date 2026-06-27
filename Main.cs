@@ -1,4 +1,5 @@
 using System.Text;
+using libAVG;
 
 namespace practice23var
 {
@@ -15,7 +16,6 @@ namespace practice23var
         {
             if (!int.TryParse(textBoxRang.Text, out rang))
             {
-                
 
                 MessageBox.Show("Введите корректное значение ранга матрицы!");
                 return;
@@ -53,7 +53,7 @@ namespace practice23var
                     {
                         inputRow[j] = (int)dataGridViewMatrix[j, i].Value;
                     }
-                    results[i] = new avg1DMatrix(inputRow).Result;
+                    results[i] = avg1DMatrix.calculateAVG(inputRow);
                     sb.Append("Строка№ " + i + ": " + results[i] + "\n");
                 }
 
@@ -65,6 +65,11 @@ namespace practice23var
             {
                 MessageBox.Show("Сначала создайте матрицу!");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

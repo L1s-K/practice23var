@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="libAVG">
+      <HintPath>..\libAVG\bin\Debug\net8.0\libAVG.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
