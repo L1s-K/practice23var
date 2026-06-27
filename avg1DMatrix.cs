@@ -36,8 +36,5 @@
             return Math.Round(temp / input.Length, 4);
         }
 
-
-
-
     }
 }

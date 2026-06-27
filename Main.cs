@@ -15,7 +15,14 @@ namespace practice23var
         {
             if (!int.TryParse(textBoxRang.Text, out rang))
             {
+                
+
                 MessageBox.Show("¬ведите корректное значение ранга матрицы!");
+                return;
+            }
+            if (rang < 0)
+            {
+                MessageBox.Show("¬ведите положительное значение ранга матрицы!");
                 return;
             }
             matrixCreated = true;
